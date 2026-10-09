@@ -13,7 +13,7 @@ Tab.prototype.createButton = function(asButton) {
 		button = document.createElement("button");
 	} else {
 		button = document.createElement("a");
-		button.href = this.content.id;
+		button.href = "#" + this.content.id;
 	}
 	button.className = "tab-button";
 
