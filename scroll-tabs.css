@@ -8,7 +8,7 @@
 	scroll-behavior: smooth;
 	scroll-snap-type: x mandatory; 
 	overflow-x: auto; 
-    overflow-y: hidden;
+	overflow-y: hidden;
 }
 
 .tab-page {
@@ -37,26 +37,26 @@
 }
 
 @supports (animation-timeline: scroll()) {
-  .tab-scroller {
-    scroll-timeline: --nav-timeline inline;
-  }
+	.tab-scroller {
+		scroll-timeline: --nav-timeline inline;
+	}
 
-  .tab-button {
-    animation: highlight-active linear both;
-    animation-timeline: --nav-timeline;
-    
-    animation-range: 
-      calc((var(--index) - 0.5) * 100% / var(--total-pages)) 
-      calc((var(--index) + 0.5) * 100% / var(--total-pages));
-  }
+	.tab-button {
+		animation: highlight-active linear both;
+		animation-timeline: --nav-timeline;
+		
+		animation-range: 
+		calc((var(--index) - 0.5) * 100% / var(--total-pages)) 
+		calc((var(--index) + 0.5) * 100% / var(--total-pages));
+	}
 
-  .tab-button.active {
-    background: #eee;
-    color: #333;
-  }
+	.tab-button.active {
+		background: #eee;
+		color: #333;
+	}
 
-  @keyframes highlight-active {
-    0%, 100% { background: #eee; color: #333; }
-    30%, 70% { background: #0076ff; color: white; }
-  }
+	@keyframes highlight-active {
+		0%, 100% { background: #eee; color: #333; }
+		30%, 70% { background: #0076ff; color: white; }
+	}
 }
