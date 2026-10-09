@@ -7,6 +7,8 @@
 	flex-direction: row;
 	scroll-behavior: smooth;
 	scroll-snap-type: x mandatory; 
+	overflow-x: auto; 
+    overflow-y: hidden;
 }
 
 .tab-page {
