@@ -1,5 +1,10 @@
 
 
+function Tab() {
+	this.button = document.createElement("button");
+	this.content = document.createElement("section");
+}
+
 function TabScroller(tabCount) {
 	this.element = document.createElement("div");
 
@@ -7,6 +12,7 @@ function TabScroller(tabCount) {
 }
 
 TabScroller.prototype.addTab = function() {
-
-	this.element.appendChild()
+	var tab = new Tab();
+	
+	this.element.appendChild(tab.content);
 };
