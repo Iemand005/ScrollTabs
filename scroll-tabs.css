@@ -35,3 +35,28 @@
 	width: 100%;
 	background-color: blue;
 }
+
+@supports (animation-timeline: scroll()) {
+  .tab-scroller {
+    scroll-timeline: --nav-timeline inline;
+  }
+
+  .tab-btn {
+    animation: highlight-active linear both;
+    animation-timeline: --nav-timeline;
+    
+    animation-range: 
+      calc((var(--index) - 0.5) * 100% / var(--total-pages)) 
+      calc((var(--index) + 0.5) * 100% / var(--total-pages));
+  }
+
+  .tab-btn.active {
+    background: #eee;
+    color: #333;
+  }
+
+  @keyframes highlight-active {
+    0%, 100% { background: #eee; color: #333; }
+    30%, 70% { background: #0076ff; color: white; }
+  }
+}
