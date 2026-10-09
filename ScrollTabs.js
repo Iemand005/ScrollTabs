@@ -19,7 +19,7 @@ Tab.prototype.createButton = function(asButton) {
 
 }
 
-function TabScroller(tabCount) {
+function TabScroller(hasButtons) {
 	this.element = document.createElement("div");
 
 	this.element.className = "tab-scroller";
