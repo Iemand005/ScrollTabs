@@ -20,7 +20,7 @@ Tab.prototype.createButton = function(asButton) {
 	return button;
 }
 
-function TabScroller(hasButtons) {
+function TabScroller(parent, hasButtons) {
 
 	this.buttonHeader = hasButtons && document.createElement("div");
 
@@ -39,6 +39,8 @@ function TabScroller(hasButtons) {
 		this.container.appendChild(this.buttonHeader);
 		this.container.appendChild(this.element);
 	}
+
+	parent.appendChild(this.container);
 }
 
 TabScroller.prototype.addTab = function(content) {
