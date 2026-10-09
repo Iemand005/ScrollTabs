@@ -1,8 +1,8 @@
 
 
-function Tab() {
+function Tab(content) {
 	this.button = document.createElement("button");
-	this.content = document.createElement("section");
+	this.content = content || document.createElement("section");
 	this.content.className = "tab-page";
 }
 
@@ -14,8 +14,8 @@ function TabScroller(tabCount) {
 	this.tabs = [];
 }
 
-TabScroller.prototype.addTab = function() {
-	var tab = new Tab();
+TabScroller.prototype.addTab = function(content) {
+	var tab = new Tab(content);
 	
 	this.element.appendChild(tab.content);
 };
