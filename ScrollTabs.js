@@ -31,6 +31,8 @@ function TabScroller(hasButtons) {
 	this.tabs = [];
 }
 
+Object.defineProperty(TabScroller)
+
 TabScroller.prototype.addTab = function(content) {
 	var tab = new Tab(content, "tab-" + this.tabs.length);
 	this.tabs.push(tab);
