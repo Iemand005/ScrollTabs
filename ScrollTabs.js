@@ -2,9 +2,11 @@
 
 function Tab(content, id) {
 	
-	this.content = content || document.createElement("section");
+	this.content = document.createElement("section");
 	this.content.className = "tab-page";
 	this.content.id = id;
+
+	if (content) this.content.appendChild(content);
 
 	this.button = null;
 }
