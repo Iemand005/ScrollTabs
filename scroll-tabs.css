@@ -18,10 +18,14 @@
 	scroll-snap-align: start;
 }
 
-.tab-button {
-
+.tab-container {
+	height: 40px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
 }
 
-.tab-container {
-	
+.tab-button {
+	height: 100%;
+	width: 100%;
 }
