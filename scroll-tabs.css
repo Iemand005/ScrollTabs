@@ -36,7 +36,7 @@
 	/* background-color: blue; */
 }
 
-/* @supports (animation-timeline: scroll()) { */
+@supports (animation-timeline: scroll()) {
 	.tab-scroller {
 		scroll-timeline: --nav-timeline inline;
 	}
@@ -59,4 +59,4 @@
 		0%, 100% { background: #eee; color: #333; }
 		30%, 70% { background: #0076ff; color: white; }
 	}
-/* } */
+}
