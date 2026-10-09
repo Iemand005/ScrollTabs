@@ -17,6 +17,7 @@ Tab.prototype.createButton = function(asButton) {
 	}
 	button.className = "tab-button";
 
+	return button;
 }
 
 function TabScroller(hasButtons) {
@@ -36,5 +37,5 @@ TabScroller.prototype.addTab = function(content) {
 	
 	this.element.appendChild(tab.content);
 
-	if (this.buttonHeader) 
+	if (this.buttonHeader) this.buttonHeader.appendChild(tab.createButton());
 };
