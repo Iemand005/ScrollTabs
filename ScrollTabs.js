@@ -7,6 +7,10 @@ function Tab(content, id) {
 	this.content.id = id;
 }
 
+Tab.prototype.createButton = function() {
+	
+}
+
 function TabScroller(tabCount) {
 	this.element = document.createElement("div");
 
