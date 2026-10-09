@@ -5,6 +5,8 @@ function Tab(content, id) {
 	this.content = content || document.createElement("section");
 	this.content.className = "tab-page";
 	this.content.id = id;
+
+	this.button = null;
 }
 
 Tab.prototype.createButton = function(asButton) {
@@ -17,7 +19,13 @@ Tab.prototype.createButton = function(asButton) {
 	}
 	button.className = "tab-button";
 
+	this.button = button;
+
 	return button;
+}
+
+Tab.prototype.setTitle = function(title) {
+	this
 }
 
 function TabScroller(parent, hasButtons) {
