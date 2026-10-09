@@ -7,10 +7,13 @@ function Tab(content, id) {
 	this.content.id = id;
 }
 
-Tab.prototype.createButton = function() {
-	var button = document.createElement("button");
+Tab.prototype.createButton = function(asButton) {
+	var button = null;
+	if (asButton) {
+		button = document.createElement("button");
+	} else button = document.createElement("a");
 	button.className = "tab-button";
-	
+
 }
 
 function TabScroller(tabCount) {
