@@ -1,20 +1,22 @@
 
 
 function Tab(content, id) {
-	this.button = document.createElement("button");
+	
 	this.content = content || document.createElement("section");
 	this.content.className = "tab-page";
 	this.content.id = id;
 }
 
 Tab.prototype.createButton = function() {
+	var button = document.createElement("button");
+	button.className = "tab-button";
 	
 }
 
 function TabScroller(tabCount) {
 	this.element = document.createElement("div");
 
-	this.element.className = "tab-scroller"
+	this.element.className = "tab-scroller";
 
 	this.tabs = [];
 }
