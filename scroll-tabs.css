@@ -41,7 +41,7 @@
     scroll-timeline: --nav-timeline inline;
   }
 
-  .tab-btn {
+  .tab-button {
     animation: highlight-active linear both;
     animation-timeline: --nav-timeline;
     
@@ -50,7 +50,7 @@
       calc((var(--index) + 0.5) * 100% / var(--total-pages));
   }
 
-  .tab-btn.active {
+  .tab-button.active {
     background: #eee;
     color: #333;
   }
