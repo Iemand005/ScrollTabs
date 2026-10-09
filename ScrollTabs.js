@@ -1,4 +1,7 @@
 
-function TabScroller() {
+
+function TabScroller(tabCount) {
 
 }
+
+TabScroller
