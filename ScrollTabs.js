@@ -1,5 +1,7 @@
 
 
+const supportsCSSScrollTimeline = CSS.supports('animation-timeline', 'scroll()');
+
 function Tab(content, id) {
 	
 	this.content = document.createElement("section");
