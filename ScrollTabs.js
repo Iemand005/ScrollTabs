@@ -1,9 +1,10 @@
 
 
-function Tab(content) {
+function Tab(content, id) {
 	this.button = document.createElement("button");
 	this.content = content || document.createElement("section");
 	this.content.className = "tab-page";
+	this.content.id = id;
 }
 
 function TabScroller(tabCount) {
@@ -16,6 +17,7 @@ function TabScroller(tabCount) {
 
 TabScroller.prototype.addTab = function(content) {
 	var tab = new Tab(content, "tab-" + this.tabs.length);
+	this.tabs.push(tab);
 	
 	this.element.appendChild(tab.content);
 };
