@@ -29,9 +29,15 @@ function TabScroller(hasButtons) {
 	this.element.className = "tab-scroller";
 
 	this.tabs = [];
-}
 
-Object.defineProperty(TabScroller)
+	// this.container = hasButtons ? 
+
+	this.container = this.element;
+
+	if (hasButtons {
+		
+	})
+}
 
 TabScroller.prototype.addTab = function(content) {
 	var tab = new Tab(content, "tab-" + this.tabs.length);
