@@ -34,9 +34,11 @@ function TabScroller(hasButtons) {
 
 	this.container = this.element;
 
-	if (hasButtons {
-		
-	})
+	if (hasButtons) {
+		this.container = document.createElement("div");
+		this.container.appendChild(this.buttonHeader);
+		this.container.appendChild(this.element);
+	}
 }
 
 TabScroller.prototype.addTab = function(content) {
