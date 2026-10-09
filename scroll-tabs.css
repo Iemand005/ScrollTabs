@@ -2,10 +2,12 @@
 .tab-scroller {
 	width: 100%;
 	height: 100%;
+
+	display: flex;
+	flex-direction: row;
 }
 
 .tab-page {
 	width: 100%;
 	height: 100%;
-	background-color: red;
 }
