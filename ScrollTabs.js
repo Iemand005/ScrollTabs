@@ -25,7 +25,7 @@ Tab.prototype.createButton = function(asButton) {
 }
 
 Tab.prototype.setTitle = function(title) {
-	this
+	this.button.innerText = title;
 }
 
 function TabScroller(parent, hasButtons) {
