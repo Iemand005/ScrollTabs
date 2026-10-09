@@ -1,4 +1,4 @@
 
-function ScrollTabs() {
-	
+function TabScroller() {
+
 }

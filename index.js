@@ -1,3 +1,3 @@
 
 
-const tabs = new ScrollTabs();
+const tabs = new TabScroller();
