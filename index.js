@@ -1,6 +1,6 @@
 
 
-const tabs = new TabScroller();
+const tabs = new TabScroller(true);
 
 tabs.addTab();
 tabs.addTab();
