@@ -37,6 +37,7 @@ function TabScroller(parent, hasButtons) {
 	if (hasButtons) {
 		this.container = document.createElement("div");
 		this.container.className = "tab-container"
+		this.buttonHeader.className = "tab-header";
 		this.container.appendChild(this.buttonHeader);
 		this.container.appendChild(this.element);
 	}
