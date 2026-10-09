@@ -11,7 +11,10 @@ Tab.prototype.createButton = function(asButton) {
 	var button = null;
 	if (asButton) {
 		button = document.createElement("button");
-	} else button = document.createElement("a");
+	} else {
+		button = document.createElement("a");
+		button.href = this.content.id;
+	}
 	button.className = "tab-button";
 
 }
