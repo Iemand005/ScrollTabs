@@ -53,8 +53,9 @@ function TabScroller(parent, hasButtons) {
 	parent.appendChild(this.container);
 }
 
-TabScroller.prototype.addTab = function(content) {
+TabScroller.prototype.addTab = function(content, title) {
 	var tab = new Tab(content, "tab-" + this.tabs.length);
+	if (title) tab.setTitle(title);
 	this.tabs.push(tab);
 	
 	this.element.appendChild(tab.content);
