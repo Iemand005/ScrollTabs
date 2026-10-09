@@ -15,7 +15,7 @@ function TabScroller(tabCount) {
 }
 
 TabScroller.prototype.addTab = function(content) {
-	var tab = new Tab(content);
+	var tab = new Tab(content, "tab-" + this.tabs.length);
 	
 	this.element.appendChild(tab.content);
 };
