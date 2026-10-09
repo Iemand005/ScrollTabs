@@ -61,5 +61,5 @@ TabScroller.prototype.addTab = function(content) {
 
 	if (this.buttonHeader) this.buttonHeader.appendChild(tab.createButton());
 
-	this.element.style.setProperty('--total-pages', this.tabs.length);
+	this.container.style.setProperty('--total-pages', this.tabs.length);
 };
