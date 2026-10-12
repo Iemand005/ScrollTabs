@@ -23,6 +23,11 @@
 	height: 100%;
 	flex: 0 0 100%;
 	scroll-snap-align: start;
+
+	/* Contains each desktop's absolutely positioned window-section (and therefore its
+	   floating windows), so a desktop's windows stay inside that page and scroll with
+	   it instead of being pinned to the scroller's origin. */
+	position: relative;
 }
 
 .tab-container {
