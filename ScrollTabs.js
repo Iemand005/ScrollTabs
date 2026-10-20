@@ -103,6 +103,6 @@ TabScroller.prototype.setupScollHandler = function() {
 			}
 
 			requestAnimationFrame(animate);
-		}, 150);
+		}, 50);
 	});
 };
