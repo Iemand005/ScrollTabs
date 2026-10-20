@@ -75,5 +75,7 @@ TabScroller.prototype.addTab = function(content, title) {
 };
 
 TabScroller.prototype.setupScollHandler = function() {
-
+	this.element.onscrollend = function() {
+		console.log("I stopped scrooolllingggg")
+	}
 };
