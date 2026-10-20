@@ -56,7 +56,7 @@ function TabScroller(parent, hasButtons) {
 
 	if (parent) parent.appendChild(this.container);
 
-	if (!CSS.supports("scroll-snap-type: x mandatory")) {
+	if (typeof window.CSS !== "undefined" || !CSS.supports("scroll-snap-type: x mandatory")) {
 		// JavaScript fallback
 	}
 }
@@ -73,4 +73,8 @@ TabScroller.prototype.addTab = function(content, title) {
 	}
 
 	this.container.style.setProperty('--total-pages', this.tabs.length);
+};
+
+TabScroller.prototype.setupScollHandler = function() {
+
 };
