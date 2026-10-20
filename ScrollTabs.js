@@ -78,4 +78,13 @@ TabScroller.prototype.setupScollHandler = function() {
 	this.element.onscrollend = function() {
 		console.log("I stopped scrooolllingggg")
 	}
+
+	var timer;
+
+	this.element.addEventListener("scroll", function() {
+		clearTimeout(timer);
+		timer = setTimeout(function() {
+			// Scrolling has probably stopped
+		}, 150);
+	});
 };
