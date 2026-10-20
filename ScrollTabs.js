@@ -82,11 +82,27 @@ TabScroller.prototype.setupScollHandler = function() {
 	
 	this.element.addEventListener("scroll", function() {
 		clearTimeout(timer);
-		timer = setTimeout(function() {
-			console.log("I stopped scrooolllingggg")
-			self.element.scrollLeft = Math.round(
-				self.element.scrollLeft / self.element.clientWidth
-			) * self.element.clientWidth;
+		 timer = setTimeout(function() {
+			var width = container.clientWidth;
+			var index = Math.floor(container.scrollLeft / width);
+
+			if (container.scrollLeft % width > width / 2) index++;
+
+			var start = container.scrollLeft;
+			var end = Math.min(index * width, container.scrollWidth - width);
+			var duration = 300;
+			var time = performance.now();
+
+			function animate(now) {
+				var progress = Math.min((now - time) / duration, 1);
+				progress = 1 - Math.pow(1 - progress, 3);
+
+				container.scrollLeft = start + (end - start) * progress;
+
+				if (progress < 1) requestAnimationFrame(animate);
+			}
+
+			requestAnimationFrame(animate);
 		}, 150);
 	});
 };
