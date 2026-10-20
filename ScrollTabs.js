@@ -56,9 +56,8 @@ function TabScroller(parent, hasButtons) {
 
 	if (parent) parent.appendChild(this.container);
 
-	if (typeof window.CSS !== "undefined" || !CSS.supports("scroll-snap-type: x mandatory")) {
-		// JavaScript fallback
-	}
+	if (typeof window.CSS !== "undefined" || !CSS.supports("scroll-snap-type: x mandatory")) 
+		this.setupScollHandler();
 }
 
 TabScroller.prototype.addTab = function(content, title) {
