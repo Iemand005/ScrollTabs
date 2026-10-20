@@ -75,16 +75,13 @@ TabScroller.prototype.addTab = function(content, title) {
 };
 
 TabScroller.prototype.setupScollHandler = function() {
-	this.element.onscrollend = function() {
-		console.log("I stopped scrooolllingggg")
-	}
-
+	/** @type {number} */
 	var timer;
-
+	
 	this.element.addEventListener("scroll", function() {
 		clearTimeout(timer);
 		timer = setTimeout(function() {
-			// Scrolling has probably stopped
+			console.log("I stopped scrooolllingggg")
 		}, 150);
 	});
 };
