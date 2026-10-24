@@ -104,7 +104,7 @@ TabScroller.prototype.setupScollHandler = function() {
 			var end = index * width;
 			var duration = 300;
 			var time = performance.now();
-
+			/** @param {number} now */
 			function animate(now) {
 				var progress = Math.min((now - time) / duration, 1);
 				progress = 1 - Math.pow(1 - progress, 3);
@@ -116,5 +116,5 @@ TabScroller.prototype.setupScollHandler = function() {
 
 			requestAnimationFrame(animate);
 		}, 150);
-	});
+	}, false);
 };
