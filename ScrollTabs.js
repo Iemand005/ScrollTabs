@@ -15,7 +15,7 @@ function Tab(content, id) {
 
 	this.button = null;
 }
-
+/** @param {boolean} asButton */
 Tab.prototype.createButton = function(asButton) {
 	var button = null;
 	if (asButton) {
