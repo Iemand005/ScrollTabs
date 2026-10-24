@@ -31,10 +31,15 @@ Tab.prototype.createButton = function(asButton) {
 	return button;
 };
 
+/** @param {string} title */
 Tab.prototype.setTitle = function(title) {
-	this.button && this.button.innerText = title;
+	if (this.button) this.button.innerText = title;
 };
 
+/**
+ * @param {HTMLElement} parent
+ * @param {boolean} hasButtons
+ */
 function TabScroller(parent, hasButtons) {
 
 	this.buttonHeader = hasButtons && document.createElement("div");
@@ -42,7 +47,7 @@ function TabScroller(parent, hasButtons) {
 	this.element = document.createElement("div");
 
 	this.element.className = "tab-scroller";
-
+	/** @type {Tab[]} */
 	this.tabs = [];
 
 	// this.container = hasButtons ? 
@@ -63,6 +68,10 @@ function TabScroller(parent, hasButtons) {
 		this.setupScollHandler();
 }
 
+/**
+ * @param {HTMLElement} content
+ * @param {string} [title]
+ */
 TabScroller.prototype.addTab = function(content, title) {
 	var tab = new Tab(content, "tab-" + this.tabs.length);
 	this.tabs.push(tab);
