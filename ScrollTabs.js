@@ -83,7 +83,7 @@ TabScroller.prototype.addTab = function(content, title) {
 		if (title) tab.setTitle(title);
 	}
 
-	this.container.style.setProperty('--total-pages', this.tabs.length);
+	this.container.style.setProperty('--total-pages', this.tabs.length.toString());
 };
 
 TabScroller.prototype.setupScollHandler = function() {
