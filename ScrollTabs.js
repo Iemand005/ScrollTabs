@@ -2,8 +2,11 @@
 
 var supportsCSSScrollTimeline = CSS.supports('animation-timeline', 'scroll()');
 
+/**
+ * @param {HTMLElement} content
+ * @param {string} id
+ */
 function Tab(content, id) {
-	
 	this.content = document.createElement("section");
 	this.content.className = "tab-page";
 	this.content.id = id;
@@ -26,11 +29,11 @@ Tab.prototype.createButton = function(asButton) {
 	this.button = button;
 
 	return button;
-}
+};
 
 Tab.prototype.setTitle = function(title) {
-	this.button.innerText = title;
-}
+	this.button && this.button.innerText = title;
+};
 
 function TabScroller(parent, hasButtons) {
 
