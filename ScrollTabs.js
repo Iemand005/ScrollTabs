@@ -1,6 +1,6 @@
 
 
-const supportsCSSScrollTimeline = CSS.supports('animation-timeline', 'scroll()');
+var supportsCSSScrollTimeline = CSS.supports('animation-timeline', 'scroll()');
 
 function Tab(content, id) {
 	
