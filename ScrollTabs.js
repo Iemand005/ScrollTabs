@@ -56,15 +56,16 @@ function TabScroller(parent, hasButtons) {
 
 	if (hasButtons) {
 		this.container = document.createElement("div");
-		this.container.className = "tab-container"
+		this.container.className = "tab-container";
+		this.container.appendChild(this.element);
+		if (!this.buttonHeader) return;
 		this.buttonHeader.className = "tab-header";
 		this.container.appendChild(this.buttonHeader);
-		this.container.appendChild(this.element);
 	}
 
 	if (parent) parent.appendChild(this.container);
 
-	if (typeof window.CSS !== "undefined" || !CSS.supports("scroll-snap-type: x mandatory")) 
+	if (typeof window.CSS !== "undefined" || !CSS.supports("scroll-snap-type: x mandatory"))
 		this.setupScollHandler();
 }
 
